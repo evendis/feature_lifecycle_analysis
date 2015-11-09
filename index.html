@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>The 4 Rs</title>
+  <meta name="description" content="perform a 4 Rs analysis of your PivotalTracker project">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <link rel="stylesheet" href="app/stylesheets/app.css">
+</head>
+<body>
+
+  <a class="forkme" href="https://github.com/evendis/feature_lifecycle_analysis">
+    <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub">
+  </a>
+
+  <nav class="navbar navbar-default navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Project Feature Lifecycle Analysis <small>4Rs for PivotalTracker</small></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-12">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">About Feature Lifecycle Analysis</a></li>
+          <li role="presentation"><a href="#examples" aria-controls="examples" role="tab" data-toggle="tab">Real Project Examples</a></li>
+          <li role="presentation"><a href="#analyze" aria-controls="analyze" role="tab" data-toggle="tab">Analyze Your Project</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content">
+
+    <div role="tabpanel" class="tab-pane active" id="home">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 panel-content">
+
+            <div class="col-md-5 pull-right">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Feature Lifecycle Stages&mdash;the "4 Rs"</h3>
+                </div>
+                <div class="panel-body">
+                  <p>
+                    Feature Lifecycle Analysis uses a simple four-stage model of the life of a product feature.
+                  </p>
+                  <img src="./app/images/lifecycle_stages.png" style="width: 100%;"/>
+                  <p>
+                  <dl class="dl-horizontal">
+                    <dt>Reveal</dt>
+                    <dd>
+                      Introducing and releasing new functionality.
+                    </dd>
+                    <dt>Refine</dt>
+                    <dd>
+                      Improving or enhancing an existing feature. It is how we make good features great.
+                    </dd>
+                    <dt>Revise</dt>
+                    <dd>
+                      Bug fixing, refactoring, updating libraries.
+                      All the work we need to keep a feature alive and performing without necessarily altering the core functionality.
+                    </dd>
+                    <dt>Retire</dt>
+                    <dd>
+                      Removing features that have become obsolete or redundant.
+                    </dd>
+                  </dl>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <h3>What is Feature Lifecycle Analysis?</h3>
+
+            <p>
+              Feature Lifecycle Analysis is a technique for agile software teams (developers and product owners)
+              working on products that are expected to live long and prosper.
+              It helps balance priorities and identify systemic issues that may not be evident on the usual sprint planning timescale.
+            </p>
+            <p>
+              It shows how much effort is allocated to the major
+              stages of the feature lifecycle: from initial release to ultimate retirement.
+            </p>
+            <p>
+              Feature Lifecycle Analysis doesn't provide direct answers. It is a diagnostic providing a fresh perspective on a project,
+              and the basis for helping a team reflect on symptoms, underlying problems and hopefully solutions.
+            </p>
+            <p>
+              It can be done on paper, a whiteboard, or a spreadsheet.
+              If you use PivotalTraker, then your project
+              can be analysed automatically here.
+            </p>
+
+            <h3>A Question of Balance</h3>
+            <p>
+              If we are using agile software development process such as
+              <a href="http://en.wikipedia.org/wiki/Scrum_(software_development)">Scrum</a>,
+              then isn't Feature Lifecycle Analysis redundant?
+            </p>
+
+            <p>
+              In an ideal world with a well-balanced and high-performing team, we should be able to find our own optimal balance
+              by trusting the process:
+              <ul>
+              <li>
+                customer/business requirements rule, and are represented in the team through a product owner or even an onsite customer
+              </li>
+              <li>
+                we prioritise work for each iteration as a team, balancing customer/business requirements with other things that the team knows are important in order to meet customer expectations (like performance)
+              </li>
+              <li>
+                we keep our iterations short and continuously deliver working software, so even if we get things wrong we can course-correct in short order
+              </li>
+              </ul>
+            </p>
+
+            <p>
+              That is of course the ideal. But we operate in the real world, and many things can upset the balance of our projects
+              leading to less-than-ideal outcomes. For example:
+
+              <dl class="dl-horizontal">
+
+                <dt>Urgency Trumps Impact</dt>
+                <dd>
+                  It's easy to find a queue of people ready to argue for the latest urgent requirement,
+                  but there's no-one around to champion the more impactful stuff that hasn't also been called out as urgent.
+                  Result? Six months later, we've delivered all the urgent things, but 90% of the potential impact ("value") is still on the table.
+                </dd>
+
+                <dt>The New Shiny</dt>
+                <dd>
+                  The new shiny trumps last week's idea.
+                  This can be a problem in startups where the founder/ideas person is also the product owner.
+                  Excellent at generating new ideas, but no time or ability to follow-through.
+                  So the team leaves a trail of half-baked implementations but never seems to achieve anything great.
+                </dd>
+
+                <dt>Uninspired Leadership</dt>
+                <dd>
+                  The team is looking for insight and vision to drive priorities but just hears "meh".
+                  So the results are naturally also meh.
+                </dd>
+
+                <dt>Unreal Priorities</dt>
+                <dd>
+                  A product owner who is (consciously or not) skewing priorities towards a certain theme or faction over all others,
+                  like one particularly vocal customer.
+                  Or perhaps lacking real customer insight, priorities are out of touch with reality.
+                </dd>
+
+                <dt>Weak Team</dt>
+                <dd>
+                  A weak development team that's not able to put up a convincing case for something they believe is important.
+                </dd>
+
+                <dt>Domineering Team</dt>
+                <dd>
+                  Conversely, a development team that is too strong and always manages to spin the product owner to their way of thinking.
+                </dd>
+
+                <dt>Group Think</dt>
+                <dd>
+                  Although we use a strict planning game to prioritize stories,
+                  the team is suffering from "group think" and priorities end up skewed to one point of view.
+                </dd>
+
+                <dt>ScrumMaster At Sea</dt>
+                <dd>
+                  A scrum master that doesn't recognise there's an issue of balance until it is too late,
+                  or is running out of tricks to help the team fix it.
+                </dd>
+
+              </dl>
+            </p>
+
+            <p>
+              Feature Lifecycle Analysis is really just a diagnostic that can present in a picture what may otherwise just
+              be a gut-feeling that something is not quite right.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="examples">
+      <div class="container-fluid">
+        <div class="row panel-content">
+
+          <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">New Project (14 Sprints)</h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  This is a real project that kicked-off a few months ago with a small new team.
+                </p>
+                <p>
+                  Reflections on the analysis:
+                  <ul>
+                  <li>
+                    The peak in refinement and revision looks like payback for rushing new features
+                    and not paying sufficient attention to code quality.
+                    (in fact this is true - but the refactoring effort and team-leveling in June will hopefully
+                    prevent this from repeating)
+                  </li>
+                  <li>
+                    We hope/expect to see a continuation of new features appearing,
+                    with slightly more effort in refinement, but a drop-off of revision.
+                  </li>
+                  <li>
+                    It is too early to expect features retiring, but some should start coming through
+                    as early product ideas prove "unuseful" in practice
+                  </li>
+                  </ul>
+                </p>
+                <img src="./app/images/real_projects_1_new.png" style="width: 100%;"/>
+                <p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Mature Project (5 years)</h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  This project started in Dec-2010 and went live in Apr-2011.
+                  It is still actively maintained. We only started doing 4Rs tagging in 2013.
+                </p>
+                <p>
+                  Reflections on the analysis:
+                  <ul>
+                  <li>
+                    This is what I'd call a healthy balance for a long-lived project that remains actively
+                    maintained.
+                  </li>
+                  <li>
+                    There's at least as much effort going into refinement as revisions.
+                    This is good, as it reflects an effort to hone and polish features rather than just
+                    maintining the status quo.
+                  </li>
+                  <li>
+                    There's a periodic focus on new feature development, with active maintenance and improvement between times.
+                    This is what you'd expect in an "old" project: there isn't the ROI for continual new feature development,
+                    but neither is it being left to fester and be locked into a feature set 5 years out of date.
+                  </li>
+                  <li>
+                    There's a willingness to deprecate obsolete features.
+                    If these weren't removed, they would stay in the application and
+                    just add to the maintenance overhead.
+                  </li>
+                  </ul>
+                </p>
+                <img src="./app/images/real_projects_2_old.png" style="width: 100%;"/>
+                <p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="analyze">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 panel-content">
+            <form class="form-horizontal" id="chartoptions">
+              <div class="form-group">
+                <label for="project_id">PT Project ID or URL</label>
+                <input type="text" class="form-control" id="project_id" name="project_id" placeholder="project ID">
+              </div>
+
+              <div class="form-group">
+                <label for="token">PT API Token</label>
+                <input type="password" class="form-control" id="token" name="token" placeholder="your PivotalTracker API token">
+              </div>
+
+              <div class="form-group">
+                <label for="plot_by">Plot By Date</label>
+                <select class="form-control" id="plot_by" name="plot_by">
+                  <option value="created_at">Created</option>
+                  <option value="accepted_at">Accepted</option>
+                  <option value="updated_at">Updated</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="re_reveal">Reveal Story Labels Match</label>
+                <input type="text" class="form-control" id="re_reveal" name="re_reveal" value="reveal|release">
+              </div>
+
+              <div class="form-group">
+                <label for="re_refine">Refine Story Labels Match</label>
+                <input type="text" class="form-control" id="re_refine" name="re_refine" value="refine">
+              </div>
+
+              <div class="form-group">
+                <label for="re_revise">Revise Story Labels Match</label>
+                <input type="text" class="form-control" id="re_revise" name="re_revise" value="revise|refurb">
+              </div>
+
+              <div class="form-group">
+                <label for="re_retire">Retire Story Labels Match</label>
+                <input type="text" class="form-control" id="re_retire" name="re_retire" value="retire|remove">
+              </div>
+
+
+            </form>
+          </div>
+          <div class="col-md-8">
+
+            <div class="chart-controls panel-content">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <button data-action='load' class="btn btn-default btn-primary">Analyze Now</button>
+                  <a href="" id="permalink" class="btn" style="display:none;">
+                    <span class="glyphicon glyphicon-link"></span>
+                    permalink to this analysis (without token)
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="about-panel" class="chart-instructions">
+              <div class="panel panel-default panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title">How the Analysis Works</h3>
+                </div>
+                <div class="panel-body">
+                  <p>
+                    This is a pure Javascript client-side application.
+                    It collects story data directly from the Pivotal Tracker API for analysis and charting
+                    in the browser.
+                  </p>
+                  <h4>Requirements for a "Good" Analysis</h4>
+                  <ul>
+                    <li>at least a few weeks of project data (stories are aggregated by week)</li>
+                    <li>a good number of stories with labels matching the 4 lifecycle stages</li>
+                    <li>adjust the story label matching fields to correspond to the labels used in your project</li>
+                  </ul>
+                  <h4>Security</h4>
+                  <p>
+                    The analysis uses your API key (get it from
+                    <a href="https://www.pivotaltracker.com/profile" target="_blank">your PT Profile page</a>).
+                    The API key is used only to communicate securely from your browser to the PivotalTracker API.
+                    It is not stored in cookies or sent to any other destination.
+                    Since this is an open-source project, you
+                    <a href="https://github.com/evendis/feature_lifecycle_analysis">can check this</a>.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div id="progress-panel" class="chart-instructions" style="display:none;">
+              <div class="panel panel-default panel-success">
+                <div class="panel-heading">
+                  <h3 class="panel-title"></h3>
+                </div>
+                <div class="panel-body">
+                  <div class="progress" id="myProgressbar" >
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                      0%
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="plot-panel" class="chart-plot">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified plotly.js JavaScript -->
+  <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- Application JavaScript -->
+  <script src="app/javascripts/app.js"></script>
+
+</body>
+</html>
