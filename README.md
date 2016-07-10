@@ -1,10 +1,15 @@
-# Project Feature Lifecycle Analysis  - 4Rs for PivotalTracker
+# Project Feature Lifecycle Analysis
+
+*4Rs for PivotalTracker*
 
 ## Notes
 
 This is a pure Javascript client-side application.
-It collects story data directly from the Pivotal Tracker API
-and performs a "4Rs" analysis.
+It collects story data directly from the Pivotal Tracker API for analysis and charting in the browser.
+
+This is the source repository, it is also where the application is hosted via GitHub Pages.
+
+Run the application here: http://evendis.github.io/feature_lifecycle_analysis/
 
 
 ### PivotalTracker API Usage
