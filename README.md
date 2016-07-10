@@ -144,7 +144,7 @@ The CNAME file links a custom domain to the application.
 
 ## Contributions
 
-... are very welcome! CReate issues, fork and send pull-requests as you would any other open source project hosted on GitHub.
+... are very welcome! Create issues, fork and send pull-requests as you would any other open source project hosted on GitHub.
 
 ## Credits and References
 * [PivotalTracker](https://www.pivotaltracker.com)
@@ -152,3 +152,4 @@ The CNAME file links a custom domain to the application.
 * [Interactive Ribbon Charts with plotly.js](https://github.com/tardate/LittleCodingKata/tree/master/javascript/plotly_ribbon_charts)
 * [Progress Bars with Bootstrap](https://github.com/tardate/LittleCodingKata/tree/master/javascript/progress_bars_bootstrap)
 * [Scrum](http://en.wikipedia.org/wiki/Scrum_(software_development))
+* [..as mentioned on my blog](http://blog.tardate.com/2016/07/feature-lifecycle-analysis-with.html)
