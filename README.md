@@ -9,7 +9,7 @@ It collects story data directly from the Pivotal Tracker API for analysis and ch
 
 This is the source repository, it is also where the application is hosted via GitHub Pages.
 
-Run the application here: http://evendis.github.io/feature_lifecycle_analysis/
+Run the application here: http://fla.evendis.com/
 
 
 ### PivotalTracker API Usage
