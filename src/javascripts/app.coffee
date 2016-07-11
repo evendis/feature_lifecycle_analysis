@@ -119,12 +119,15 @@ class root.AppController
   snaffleUrlParams: ->
     # if present, initialise fields based on url params
     $('#token').val(@param('token') || '')
-    $('#project_id').val(@param('project_id') || '')
     $('#plot_by').val(@param('plot_by') || 'created_at')
     $('#re_reveal').val(@param('re_reveal') || 'reveal|release')
     $('#re_refine').val(@param('re_refine') || 'refine')
     $('#re_revise').val(@param('re_revise') || 'revise|refurb')
     $('#re_retire').val(@param('re_retire') || 'retire|remove')
+    project_id_param = @param('project_id')
+    $('#project_id').val(project_id_param || '')
+    if project_id_param
+      $('.nav-tabs a[href="#analyze"]').tab('show')
 
   param: (name)->
     if values = (new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search)

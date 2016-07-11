@@ -418,13 +418,18 @@
     };
 
     AppController.prototype.snaffleUrlParams = function() {
+      var project_id_param;
       $('#token').val(this.param('token') || '');
-      $('#project_id').val(this.param('project_id') || '');
       $('#plot_by').val(this.param('plot_by') || 'created_at');
       $('#re_reveal').val(this.param('re_reveal') || 'reveal|release');
       $('#re_refine').val(this.param('re_refine') || 'refine');
       $('#re_revise').val(this.param('re_revise') || 'revise|refurb');
-      return $('#re_retire').val(this.param('re_retire') || 'retire|remove');
+      $('#re_retire').val(this.param('re_retire') || 'retire|remove');
+      project_id_param = this.param('project_id');
+      $('#project_id').val(project_id_param || '');
+      if (project_id_param) {
+        return $('.nav-tabs a[href="#analyze"]').tab('show');
+      }
     };
 
     AppController.prototype.param = function(name) {
