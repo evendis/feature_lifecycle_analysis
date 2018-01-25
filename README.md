@@ -7,9 +7,9 @@
 This is a pure Javascript client-side application.
 It collects story data directly from the Pivotal Tracker API for analysis and charting in the browser.
 
-This is the source repository, it is also where the application is hosted via GitHub Pages.
+This is the source repository, it is also from where the application is deployed and hosted with netlify.com.
 
-Run the application here: http://fla.evendis.com/
+Run the application here: https://fla.evendis.com/
 
 
 ### PivotalTracker API Usage
@@ -151,5 +151,5 @@ The CNAME file links a custom domain to the application.
 * [PivotalTracker API](https://www.pivotaltracker.com/help/api#top)
 * [Interactive Ribbon Charts with plotly.js](https://github.com/tardate/LittleCodingKata/tree/master/javascript/plotly_ribbon_charts)
 * [Progress Bars with Bootstrap](https://github.com/tardate/LittleCodingKata/tree/master/javascript/progress_bars_bootstrap)
-* [Scrum](http://en.wikipedia.org/wiki/Scrum_(software_development))
+* [Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development))
 * [..as mentioned on my blog](http://blog.tardate.com/2016/07/feature-lifecycle-analysis-with.html)
